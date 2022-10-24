@@ -1,0 +1,22 @@
+{
+  "name": "ui-automation-challenge-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "Testing"
+  ],
+  "author": "Diego Alejandro Cortés Roa",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "playwright-core": "^1.27.1"
+  },
+  "description": ""
+}
