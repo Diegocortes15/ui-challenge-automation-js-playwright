@@ -1,6 +1,5 @@
 import {test, Page} from "@playwright/test";
 import {NavigationBar} from "./components/navigation.comp";
-import {BASE_URL} from "../utils/constants.util";
 
 export class HomePage {
   private readonly _page: Page;
@@ -14,7 +13,7 @@ export class HomePage {
 
   public async open(): Promise<void> {
     await test.step("⏩ Go to home page", async (): Promise<void> => {
-      await this._page.goto(BASE_URL);
+      await this._page.goto("/");
     });
   }
 

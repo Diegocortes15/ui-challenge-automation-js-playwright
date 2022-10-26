@@ -9,7 +9,7 @@ import {
   MoviePage,
 } from "../pages/index";
 
-test.describe.parallel("Movie filter tests", () => {
+test.describe.parallel("💼 Movie filter tests", () => {
   let homePage: HomePage;
   let loginPage: LoginPage;
   let profilePage: ProfilePage;

@@ -2,21 +2,25 @@ import {test, expect, Locator, Page} from "@playwright/test";
 
 export class ActorPage {
   private readonly _page: Page;
-  private readonly _moviesList: Locator;
+  private readonly _actingTimelineList: Locator;
+  private readonly _actingTimeline: Locator;
 
   constructor(page: Page) {
     this._page = page;
-    this._moviesList = page.locator(".zero + .credits bdi");
+    this._actingTimelineList = page.locator(".zero + .credits");
+    this._actingTimeline = page.locator(".zero + .credits bdi");
   }
 
   public async isMovieInActingTimeline(movie: string): Promise<boolean> {
     return await test.step("⏩ Verify if movie is in acting timeline", async (): Promise<boolean> => {
-      const movies: string = (await this._moviesList.allInnerTexts()).reduce(
-        (previousValue, currentValue) =>
-          previousValue.concat("; ", currentValue),
-        ""
-      );
-      return movies.includes(movie);
+      await this._actingTimelineList.waitFor({
+        state: "visible",
+      });
+
+      const isMovie: boolean = (
+        await this._actingTimelineList.allInnerTexts()
+      ).some((listMovie) => listMovie.includes(movie));
+      return isMovie;
     });
   }
 

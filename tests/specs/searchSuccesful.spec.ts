@@ -7,7 +7,7 @@ import {
   SearchResultPage,
 } from "../pages/index";
 
-test.describe.parallel("Search successful", () => {
+test.describe.parallel("💼 Search successful", () => {
   let homePage: HomePage;
   let loginPage: LoginPage;
   let profilePage: ProfilePage;
