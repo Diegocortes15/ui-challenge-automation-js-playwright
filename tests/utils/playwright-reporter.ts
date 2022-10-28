@@ -21,7 +21,7 @@ class TestsReporter implements Reporter {
     console.log(`🎭 Finished the run: ${result.status}`);
   }
 
-  public resultIcon(result: string) {
+  public resultIcon(result: string): string {
     switch (result) {
       case ResultStatus.Passed:
         return "✅";
@@ -32,7 +32,7 @@ class TestsReporter implements Reporter {
       case ResultStatus.Interrupted:
         return "⛔";
       default:
-        break;
+        return "Unknown Status";
     }
   }
 }
