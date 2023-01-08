@@ -9,14 +9,15 @@
   "author": "Diego Alejandro Cortés Roa",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.27.1"
+    "@playwright/test": "^1.29.2"
   },
   "directories": {
     "test": "tests"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
-    "playwright-core": "^1.27.1"
+    "playwright": "^1.29.2",
+    "playwright-core": "^1.29.2"
   },
   "description": ""
 }
